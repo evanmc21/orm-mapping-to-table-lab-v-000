@@ -18,4 +18,8 @@ def self.create_table
       DB[:conn].execute(sql)
 end
 
+def self.drops_table
+  DB[:conn].execute("DROP TABLE students")
+end
+
 end
