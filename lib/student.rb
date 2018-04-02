@@ -29,6 +29,6 @@ def self.save
     SQL
 
     DB[:conn].execute(sql, self.name, self.grade)
-    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students" [0][0]) #bound parameters
+    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students" [0][0]) #bound parameters. grabbing the value of he last ID column of the last inserted row and set that equal to the given student instance's id attribute.
   end
 end
