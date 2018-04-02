@@ -22,7 +22,7 @@ def self.drop_table
   DB[:conn].execute("DROP TABLE students")
 end
 
-def self.save
+def save
   sql = <<-SQL
     INSERT INTO students (name, grade)
     VALUES (?, ?)
